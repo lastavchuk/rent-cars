@@ -15,14 +15,6 @@ function Header() {
     function darkTheme() {
         dispatch(changeTheme(!theme));
         document.body.classList.toggle('dark');
-
-        // if (themeToggle.checked) {
-        //     document.body.classList.add('dark');
-        //     localStorage.setItem('theme', 'dark');
-        //     return;
-        // }
-        // document.body.classList.remove('dark');
-        // localStorage.setItem('theme', 'light');
     }
 
     return (
@@ -30,9 +22,6 @@ function Header() {
             <Container>
                 <div className="header-wrapper">
                     <nav className="main-nav">
-                        {/* <NavLink to="/" className="logo">
-                        Logo
-                    </NavLink> */}
                         <ul className="site-nav">
                             <li className="nav-item">
                                 <NavLink to="/" className="link">

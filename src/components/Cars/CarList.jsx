@@ -66,7 +66,7 @@ const CarList = ({ arrCars }) => {
 };
 
 CarList.propTypes = {
-    arrCars: PropTypes.array.isRequired,
+    arrCars: PropTypes.array,
 };
 
 export default CarList;

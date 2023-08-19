@@ -26,13 +26,13 @@ export const StyledCar = styled.li`
     .card-info {
         color: rgba(18, 20, 23, 0.5);
         font-size: 12px;
-    }
-    .card-info-tag {
-        margin-right: 6px;
 
         text-overflow: ellipsis;
         overflow: hidden;
         white-space: nowrap;
+    }
+    .card-info-tag {
+        margin-right: 6px;
     }
     .card-info-tag:not(:last-child)::after {
         content: '|';
