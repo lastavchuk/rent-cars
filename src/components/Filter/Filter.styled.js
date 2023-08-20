@@ -13,11 +13,21 @@ export const StyledFilter = styled.form`
         border-radius: 14px;
         background-color: #f7f7fb;
     }
+    .form-select::-webkit-scrollbar {
+        width: 8px;
+        background-color: #ffffff;
+    }
+
+    .form-select::-webkit-scrollbar-thumb {
+        background-color: rgba(18, 20, 23, 0.05);
+        border-radius: 4px;
+    }
     .form-option {
         font-size: 16px;
         font-weight: 500;
         line-height: 1.25;
 
+        background-color: #ffffff;
         color: rgba(18, 20, 23, 0.2);
     }
     .wrapper {
@@ -31,7 +41,7 @@ export const StyledFilter = styled.form`
 
 export const StyledLabel = styled.label`
     margin-bottom: 8px;
-    color: #8a8a89;
+    color: var(--form-text-color);
     font-size: 14px;
     font-weight: 500;
     line-height: 1.28;

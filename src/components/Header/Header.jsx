@@ -3,45 +3,38 @@ import { NavLink } from 'react-router-dom';
 import { StyledHeader } from './Header.styled';
 import SwitchLang from './SwitchLang';
 import langOprions from '../../assests/lang/langList';
-import { useDispatch, useSelector } from 'react-redux';
-import { selectLang, selectTheme } from 'redux/selectors';
-import { changeTheme } from 'redux/rootSlice';
+import { useSelector } from 'react-redux';
+import { selectLang } from 'redux/selectors';
+import Toggle from 'components/Toggle/Toggle';
 
 function Header() {
-    const dispatch = useDispatch();
     const lang = useSelector(selectLang);
-    const theme = useSelector(selectTheme);
-
-    function darkTheme() {
-        dispatch(changeTheme(!theme));
-        document.body.classList.toggle('dark');
-    }
 
     return (
         <StyledHeader>
             <Container>
                 <div className="header-wrapper">
-                    <nav className="main-nav">
-                        <ul className="site-nav">
+                    <nav>
+                        <ul>
                             <li className="nav-item">
-                                <NavLink to="/" className="link">
+                                <NavLink to="/">
                                     {langOprions.homePage[lang]}
                                 </NavLink>
                             </li>
                             <li className="nav-item">
-                                <NavLink to="/catalog" className="link">
+                                <NavLink to="/catalog">
                                     {langOprions.catalogPage[lang]}
                                 </NavLink>
                             </li>
                             <li className="nav-item">
-                                <NavLink to="/favorites" className="link">
+                                <NavLink to="/favorites">
                                     {langOprions.favoritesPage[lang]}
                                 </NavLink>
                             </li>
                         </ul>
                     </nav>
                     <div className="right-bar">
-                        <span onClick={darkTheme}>dark</span>
+                        <Toggle />
                         <SwitchLang />
                     </div>
                 </div>

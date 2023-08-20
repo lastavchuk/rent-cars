@@ -22,7 +22,7 @@ export const StyledModal = styled.div`
     transform: translate(-50%, -50%);
 
     padding: 40px;
-    background-color: #fff;
+    background-color: var(--bg-color);
     border-radius: 24px;
 `;
 
@@ -34,7 +34,7 @@ export const IconCloseModal = styled.div`
     top: 16px;
     right: 16px;
 
-    color: #121417;
+    color: var(--secondary-text-color);
     transition: color var(--tr-rule);
 
     &:hover {

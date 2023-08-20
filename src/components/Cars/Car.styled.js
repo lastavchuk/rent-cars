@@ -16,7 +16,7 @@ export const StyledCar = styled.li`
         justify-content: space-between;
         margin-top: 14px;
 
-        color: #121417;
+        color: var(--secondary-text-color);
         font-size: 16px;
         font-weight: 500;
     }
@@ -24,7 +24,7 @@ export const StyledCar = styled.li`
         color: #3470ff;
     }
     .card-info {
-        color: rgba(18, 20, 23, 0.5);
+        color: var(--tag-text-color);
         font-size: 12px;
 
         text-overflow: ellipsis;

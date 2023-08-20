@@ -13,7 +13,7 @@ export const ModalContainer = styled.div`
     .card-title {
         margin-top: 14px;
 
-        color: #121417;
+        color: var(--secondary-text-color);
         font-size: 18px;
         font-weight: 500;
         line-height: 1.33;
@@ -27,7 +27,7 @@ export const ModalContainer = styled.div`
     .card-info {
         margin-top: 4px;
 
-        color: rgba(18, 20, 23, 0.5);
+        color: var(--tag-text-color);
         font-size: 12px;
     }
     .card-info-tag {
@@ -39,7 +39,7 @@ export const ModalContainer = styled.div`
     }
     .card-descr {
         margin-top: 14px;
-        color: #121417;
+        color: vat(--secondary-text-color);
         font-size: 14px;
         line-height: 1.43;
     }
@@ -47,7 +47,7 @@ export const ModalContainer = styled.div`
         margin-top: 24px;
     }
     .cart-additionals-title {
-        color: #121417;
+        color: var(--secondary-text-color);
         font-size: 14px;
         font-weight: 500;
         line-height: 1.43;
