@@ -1,7 +1,6 @@
 import Container from 'components/Container/Container';
 import { useSelector } from 'react-redux';
 import { selectLang } from 'redux/selectors';
-// import { addCar, deleteCar, editCar, fetchAllCars, getCar } from 'services/api';
 import langOprions from '../../assests/lang/langList';
 import sprite from '../../images/sprite.svg';
 import homeImg from '../../images/home.webp';
@@ -17,7 +16,6 @@ function HomePage() {
 
     return (
         <Container>
-            {/* https://www.rentalcars.com/uk/ */}
             <StyledTitle1>{langOprions.titleMain[lang]}</StyledTitle1>
             <StyledImg src={homeImg} alt="Rent cars" />
 

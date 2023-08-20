@@ -1,5 +1,11 @@
-function Loader() {
-    return <h3>Loader</h3>;
-}
+import { StyledLoader, StyledOverlay } from './Loader.styled';
+
+const Loader = () => {
+    return (
+        <StyledOverlay>
+            <StyledLoader />
+        </StyledOverlay>
+    );
+};
 
 export default Loader;
