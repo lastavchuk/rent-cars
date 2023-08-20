@@ -3,9 +3,7 @@ import styled from 'styled-components';
 const StyledContainer = styled.div`
     width: 320px;
     margin: 0 auto;
-    padding-left: 8px;
-    padding-right: 8px;
-    padding-bottom: 8px;
+    padding: 8px;
 
     @media screen and (min-width: 576px) {
         width: 576px;

@@ -58,6 +58,14 @@ const langOprions = {
         ua: 'Додати в улюблені',
         en: 'Add to favorite',
     },
+    addToFavoriteNotification: {
+        ua: 'додано в обрані',
+        en: 'added to favorites',
+    },
+    delToFavoriteNotification: {
+        ua: 'видалено з обраних',
+        en: 'removed from favorites',
+    },
 
     //=== ModalDetails
     closeModal: {

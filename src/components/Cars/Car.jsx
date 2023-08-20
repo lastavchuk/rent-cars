@@ -7,6 +7,7 @@ import langOprions from '../../assests/lang/langList';
 import { StyledCar } from './Car.styled';
 import Button from 'components/Button/Button';
 import { changeFavoriteId } from 'redux/cars/carsSlice';
+import { toast } from 'react-toastify';
 
 const Car = ({ carInfo, handlerOpenModal }) => {
     const dispatch = useDispatch();
@@ -31,8 +32,17 @@ const Car = ({ carInfo, handlerOpenModal }) => {
     const newAdress = parseAdress(address);
 
     function onFavorite(evt) {
-        evt.currentTarget.classList.toggle('card-favorite');
+        const isAdded = evt.currentTarget.classList.toggle('card-favorite');
         dispatch(changeFavoriteId(Number(evt.currentTarget.dataset.id)));
+        if (isAdded) {
+            toast.info(
+                `${make} ${model} ${langOprions.addToFavoriteNotification[lang]}`
+            );
+        } else {
+            toast.info(
+                `${make} ${model} ${langOprions.delToFavoriteNotification[lang]}`
+            );
+        }
     }
 
     function isFavorite(id) {
