@@ -1,22 +1,24 @@
+import { useSelector } from 'react-redux';
 import { Slide, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { selectTheme } from 'redux/selectors';
 
 function Notification() {
+    const dark = useSelector(selectTheme);
+    let themeSite = 'colored';
+
+    if (dark) themeSite = 'light';
+
     return (
         <ToastContainer
-            position="top-right"
-            autoClose={5000}
+            autoClose={2000}
             newestOnTop
-            closeOnClick
-            rtl={false}
             pauseOnFocusLoss
             draggable
             pauseOnHover
-            theme="colored"
+            theme={themeSite}
             transition={Slide}
-        >
-            <b>User</b> is already in contacts
-        </ToastContainer>
+        />
     );
 }
 
