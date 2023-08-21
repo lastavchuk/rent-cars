@@ -46,6 +46,8 @@ const Car = ({ carInfo, handlerOpenModal }) => {
     }
 
     function isFavorite(id) {
+        if (!favoriteCars) return;
+
         const idx = favoriteCars.findIndex(car => car.id === id);
         if (idx === -1) return false;
         return true;

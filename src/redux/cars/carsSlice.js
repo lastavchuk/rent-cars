@@ -11,7 +11,7 @@ const carsSlice = createSlice({
     initialState: {
         carsData: null,
         carsFavoriteId: [],
-        carsFavoriteData: [],
+        carsFavoriteData: null,
         filter: null,
         currentPage: 1,
     },

@@ -52,6 +52,14 @@ const langOprions = {
         ua: 'Немає автомобілів',
         en: 'There are no cars',
     },
+    noCarsFavorite: {
+        ua: 'Немає обраних автомобілів',
+        en: 'There are no favorite cars',
+    },
+    noCarsRequest: {
+        ua: 'Автомобілі за запитом не знайдено',
+        en: 'No cars found on request',
+    },
 
     //=== Car
     learnMore: {

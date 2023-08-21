@@ -37,27 +37,36 @@ const CarList = ({ arrCars }) => {
     return (
         <>
             {!!arrCars ? (
-                <>
-                    <StyledCarList>
-                        {arrCars.slice(0, currentPage * COUNT_CARS).map(car => (
-                            <Car
-                                key={car.id}
-                                carInfo={car}
-                                handlerOpenModal={handlerDetailCarInfo}
-                            />
-                        ))}
-                    </StyledCarList>
-                    {currentPage < Math.ceil(arrCars.length / COUNT_CARS) && (
-                        <StyledLoadMore type="button" onClick={loadMore}>
-                            {langOprions.loadMore[lang]}
-                        </StyledLoadMore>
-                    )}
-                    {isModalOpen && (
-                        <Modal closeReducer={closeModal}>
-                            <ModalDetail />
-                        </Modal>
-                    )}
-                </>
+                arrCars.length > 0 ? (
+                    <>
+                        <StyledCarList>
+                            {arrCars
+                                .slice(0, currentPage * COUNT_CARS)
+                                .map(car => (
+                                    <Car
+                                        key={car.id}
+                                        carInfo={car}
+                                        handlerOpenModal={handlerDetailCarInfo}
+                                    />
+                                ))}
+                        </StyledCarList>
+                        {currentPage <
+                            Math.ceil(arrCars.length / COUNT_CARS) && (
+                            <StyledLoadMore type="button" onClick={loadMore}>
+                                {langOprions.loadMore[lang]}
+                            </StyledLoadMore>
+                        )}
+                        {isModalOpen && (
+                            <Modal closeReducer={closeModal}>
+                                <ModalDetail />
+                            </Modal>
+                        )}
+                    </>
+                ) : (
+                    <StyledTitle3>
+                        {langOprions.noCarsRequest[lang]}
+                    </StyledTitle3>
+                )
             ) : (
                 <StyledTitle3>{langOprions.noCars[lang]}</StyledTitle3>
             )}
