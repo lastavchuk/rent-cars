@@ -6,7 +6,7 @@ import {
     selectLang,
 } from 'redux/selectors';
 
-import { StyledCarList, StyledLoadMore } from './CarList.styled';
+import { StyledCarList, StyledLoadMore, StyledTitle3 } from './CarList.styled';
 
 import { changeCurrentPage } from 'redux/cars/carsSlice';
 import { closeModal, openModal } from 'redux/modalSlice';
@@ -36,7 +36,7 @@ const CarList = ({ arrCars }) => {
 
     return (
         <>
-            {arrCars ? (
+            {!!arrCars ? (
                 <>
                     <StyledCarList>
                         {arrCars.slice(0, currentPage * COUNT_CARS).map(car => (
@@ -59,7 +59,7 @@ const CarList = ({ arrCars }) => {
                     )}
                 </>
             ) : (
-                <h3>No cars</h3>
+                <StyledTitle3>{langOprions.noCars[lang]}</StyledTitle3>
             )}
         </>
     );

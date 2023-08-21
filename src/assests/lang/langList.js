@@ -48,6 +48,10 @@ const langOprions = {
         ua: 'Завантажити ще',
         en: 'Load more',
     },
+    noCars: {
+        ua: 'Немає автомобілів',
+        en: 'There are no cars',
+    },
 
     //=== Car
     learnMore: {
@@ -133,6 +137,22 @@ const langOprions = {
     carMileage: {
         ua: 'Пробіг автомобіля / км',
         en: 'Car mileage / km',
+    },
+    fromField: {
+        ua: 'Від',
+        en: 'From',
+    },
+    toField: {
+        ua: 'До',
+        en: 'To',
+    },
+    errMustBe: {
+        ua: 'Має бути 0 або більше',
+        en: 'Must be 0 or greater',
+    },
+    errOnlyLetters: {
+        ua: 'Тільки букви або пробіли',
+        en: 'Only letters or spaces',
     },
 };
 export default langOprions;

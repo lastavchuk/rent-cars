@@ -24,3 +24,7 @@ export const StyledLoadMore = styled.button`
         color: #0b44cd;
     }
 `;
+
+export const StyledTitle3 = styled.h3`
+    text-align: center;
+`;
