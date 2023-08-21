@@ -13,6 +13,7 @@ const Filter = () => {
     const all = useSelector(selectAllCars);
 
     const {
+        watch,
         register,
         handleSubmit,
         formState: { errors },
@@ -89,6 +90,18 @@ const Filter = () => {
                                 value: 0,
                                 message: `${langOprions.errMustBe[lang]}`,
                             },
+                            validate: {
+                                fromTo: () => {
+                                    const watchFrom = watch('from');
+                                    const watchTo = watch('to');
+                                    if (!!watchFrom && !!watchTo) {
+                                        delete errors.to;
+                                        return (
+                                            Number(watchFrom) <= Number(watchTo)
+                                        );
+                                    }
+                                },
+                            },
                         })}
                     />
 
@@ -100,6 +113,18 @@ const Filter = () => {
                             min: {
                                 value: 0,
                                 message: `${langOprions.errMustBe[lang]}`,
+                            },
+                            validate: {
+                                fromTo: () => {
+                                    const watchFrom = watch('from');
+                                    const watchTo = watch('to');
+                                    if (!!watchFrom && !!watchTo) {
+                                        delete errors.from;
+                                        return (
+                                            Number(watchTo) >= Number(watchFrom)
+                                        );
+                                    }
+                                },
                             },
                         })}
                     />
