@@ -86,27 +86,29 @@ export const filteredCars = (filter, allCars) => {
             return tmpArr.filter(
                 car => car.mileage >= fromNumber && car.mileage <= toNumber
             );
-        }
-        if (!!from) {
-            const fromNumber = Number(from);
-            let tmpArr;
-            if (!!rez) {
-                tmpArr = rez;
-            } else {
-                tmpArr = allCars;
+        } else {
+            if (!!from) {
+                const fromNumber = Number(from);
+                let tmpArr;
+                if (!!rez) {
+                    tmpArr = rez;
+                } else {
+                    tmpArr = allCars;
+                }
+                return tmpArr.filter(car => car.mileage >= fromNumber);
             }
-            return tmpArr.filter(car => car.mileage >= fromNumber);
-        }
-        if (!!to) {
-            const toNumber = Number(to);
-            let tmpArr;
-            if (!!rez) {
-                tmpArr = rez;
-            } else {
-                tmpArr = allCars;
+            if (!!to) {
+                const toNumber = Number(to);
+                let tmpArr;
+                if (!!rez) {
+                    tmpArr = rez;
+                } else {
+                    tmpArr = allCars;
+                }
+                return tmpArr.filter(car => toNumber >= car.mileage);
             }
-            return tmpArr.filter(car => toNumber >= car.mileage);
         }
+
         return rez;
     }
     return allCars;
