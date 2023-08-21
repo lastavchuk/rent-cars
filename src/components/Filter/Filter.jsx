@@ -13,6 +13,7 @@ const Filter = () => {
     const all = useSelector(selectAllCars);
 
     const {
+        watch,
         register,
         handleSubmit,
         formState: { errors },
@@ -21,6 +22,9 @@ const Filter = () => {
     const onSubmit = data => {
         dispatch(setFilter(data));
     };
+
+    const watchFrom = Number(watch('from')) || 0;
+    const watchTo = Number(watch('to')) || Infinity;
 
     return (
         <StyledFilter onSubmit={handleSubmit(onSubmit)}>
@@ -89,9 +93,14 @@ const Filter = () => {
                                 value: 0,
                                 message: `${langOprions.errMustBe[lang]}`,
                             },
+                            validate: {
+                                fromTo: value => {
+                                    errors.to = null;
+                                    return parseInt(value) <= watchTo;
+                                },
+                            },
                         })}
                     />
-                    {errors?.from && <p>{errors.from.message}</p>}
 
                     <StyledInput
                         className="input-right"
@@ -102,9 +111,26 @@ const Filter = () => {
                                 value: 0,
                                 message: `${langOprions.errMustBe[lang]}`,
                             },
+                            validate: {
+                                fromTo: value => {
+                                    errors.from = null;
+                                    return parseInt(value) >= watchFrom;
+                                },
+                            },
                         })}
                     />
-                    {errors?.to && <p>{errors.to.message}</p>}
+
+                    {errors?.from?.type === 'min' && (
+                        <p>{errors.from.message}</p>
+                    )}
+                    {errors?.from?.type === 'fromTo' && (
+                        <p>{langOprions.errFromTo[lang]}</p>
+                    )}
+
+                    {errors?.to?.type === 'min' && <p>{errors.to.message}</p>}
+                    {errors?.to?.type === 'fromTo' && (
+                        <p>{langOprions.errFromTo[lang]}</p>
+                    )}
                 </div>
             </div>
 

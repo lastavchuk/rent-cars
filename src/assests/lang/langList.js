@@ -154,5 +154,9 @@ const langOprions = {
         ua: 'Тільки букви або пробіли',
         en: 'Only letters or spaces',
     },
+    errFromTo: {
+        ua: 'Від має бути меншим або рівним за До',
+        en: 'From must be less than or equal to To',
+    },
 };
 export default langOprions;
