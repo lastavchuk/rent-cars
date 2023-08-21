@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkrent_cars=self.webpackChunkrent_cars||[]).push([[697],{5697:function(n,r,e){e.r(r);var t=e(2791),s=e(9434),u=e(6351),a=e(8649),c=e(517),f=e(3623),i=e(6779),l=e(3333),v=e(3329);r.default=function(){var n=(0,s.I0)(),r=(0,s.v9)(u.AD);(0,t.useEffect)((function(){n((0,a.zt)(1)),n((0,a.Tv)(null))}),[n]);var e=(0,s.v9)(u.N$);return(0,v.jsxs)(f.Z,{children:[(0,v.jsx)(i.Z,{filter:r,onFilterChange:function(r){n((0,a.Tv)(r))}}),(0,v.jsx)(c.Z,{arrCars:(0,l.ZC)(r,e)})]})}}}]);
-//# sourceMappingURL=697.575a2f86.chunk.js.map
