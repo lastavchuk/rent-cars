@@ -13,7 +13,6 @@ const Filter = () => {
     const all = useSelector(selectAllCars);
 
     const {
-        watch,
         register,
         handleSubmit,
         formState: { errors },
@@ -22,9 +21,6 @@ const Filter = () => {
     const onSubmit = data => {
         dispatch(setFilter(data));
     };
-
-    const watchFrom = Number(watch('from')) || 0;
-    const watchTo = Number(watch('to')) || Infinity;
 
     return (
         <StyledFilter onSubmit={handleSubmit(onSubmit)}>
@@ -93,12 +89,6 @@ const Filter = () => {
                                 value: 0,
                                 message: `${langOprions.errMustBe[lang]}`,
                             },
-                            validate: {
-                                fromTo: value => {
-                                    errors.to = null;
-                                    return parseInt(value) <= watchTo;
-                                },
-                            },
                         })}
                     />
 
@@ -110,12 +100,6 @@ const Filter = () => {
                             min: {
                                 value: 0,
                                 message: `${langOprions.errMustBe[lang]}`,
-                            },
-                            validate: {
-                                fromTo: value => {
-                                    errors.from = null;
-                                    return parseInt(value) >= watchFrom;
-                                },
                             },
                         })}
                     />
