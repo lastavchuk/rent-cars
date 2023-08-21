@@ -17,7 +17,7 @@ function HomePage() {
     return (
         <Container>
             <StyledTitle1>{langOprions.titleMain[lang]}</StyledTitle1>
-            <StyledImg src={homeImg} alt="Rent cars" />
+            <StyledImg width="900" height="600" src={homeImg} alt="Rent cars" />
 
             <StyledWrapper>
                 <StyledBlock>

@@ -7,6 +7,18 @@ export const StyledFilter = styled.form`
 
     margin-bottom: 50px;
 
+    p {
+        position: absolute;
+        bottom: -30px;
+        left: 0;
+        color: #bf1650;
+    }
+
+    p::before {
+        display: inline;
+        content: '⚠ ';
+    }
+
     .form-select {
         padding: 14px 18px;
         border: none;
@@ -31,11 +43,9 @@ export const StyledFilter = styled.form`
         color: rgba(18, 20, 23, 0.2);
     }
     .wrapper {
+        position: relative;
         display: flex;
         flex-direction: column;
-    }
-    .ss {
-        height: 48px;
     }
 `;
 

@@ -16,7 +16,7 @@ const Filter = () => {
         register,
         handleSubmit,
         formState: { errors },
-    } = useForm();
+    } = useForm({ mode: 'onChange' });
 
     const onSubmit = data => {
         dispatch(setFilter(data));
@@ -29,7 +29,10 @@ const Filter = () => {
                 <select
                     className="form-select"
                     {...register('brand', {
-                        pattern: /^[A-Za-z 0-9а-яА-ЯёЁіІїЇъЪ]+$/i,
+                        pattern: {
+                            value: /^[A-Za-z а-яА-ЯёЁіІїЇъЪ]+$/i,
+                            message: `${langOprions.errOnlyLetters[lang]}`,
+                        },
                     })}
                 >
                     <option value="">{langOprions.selectBrand[lang]}</option>
@@ -45,16 +48,19 @@ const Filter = () => {
                         ))}
                 </select>
 
-                {errors?.brand?.type === 'pattern' && (
-                    <p>Only letters and numbers</p>
-                )}
+                {errors?.brand && <p>{errors.from.message}</p>}
             </div>
 
             <div className="wrapper">
                 <StyledLabel>{langOprions.price1Hour[lang]}</StyledLabel>
                 <select
                     className="form-select"
-                    {...register('price', { min: 0 })}
+                    {...register('price', {
+                        min: {
+                            value: 0,
+                            message: `${langOprions.errMustBe[lang]}`,
+                        },
+                    })}
                 >
                     <option value="">{langOprions.toPrice[lang]}</option>
                     {!!all &&
@@ -68,7 +74,7 @@ const Filter = () => {
                             </option>
                         ))}
                 </select>
-                {errors.price && <p>Must be 0 or greater</p>}
+                {errors?.price && <p>{errors.price.message}</p>}
             </div>
 
             <div className="wrapper">
@@ -77,18 +83,28 @@ const Filter = () => {
                     <StyledInput
                         className="input-left"
                         type="number"
-                        placeholder="From"
-                        {...register('from', { min: 0 })}
+                        placeholder={langOprions.fromField[lang]}
+                        {...register('from', {
+                            min: {
+                                value: 0,
+                                message: `${langOprions.errMustBe[lang]}`,
+                            },
+                        })}
                     />
-                    {errors.from && <p>Must be 0 or greater</p>}
+                    {errors?.from && <p>{errors.from.message}</p>}
 
                     <StyledInput
                         className="input-right"
                         type="number"
-                        placeholder="To"
-                        {...register('to', { min: 0 })}
+                        placeholder={langOprions.toField[lang]}
+                        {...register('to', {
+                            min: {
+                                value: 0,
+                                message: `${langOprions.errMustBe[lang]}`,
+                            },
+                        })}
                     />
-                    {errors.to && <p>Must be 0 or greater</p>}
+                    {errors?.to && <p>{errors.to.message}</p>}
                 </div>
             </div>
 
