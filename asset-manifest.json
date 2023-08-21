@@ -1,12 +1,12 @@
 {
   "files": {
     "main.css": "/rent-cars/static/css/main.428091be.css",
-    "main.js": "/rent-cars/static/js/main.888da6bf.js",
+    "main.js": "/rent-cars/static/js/main.6a121064.js",
     "static/js/863.1bc233d6.chunk.js": "/rent-cars/static/js/863.1bc233d6.chunk.js",
     "static/js/69.92c1caaa.chunk.js": "/rent-cars/static/js/69.92c1caaa.chunk.js",
     "static/js/697.575a2f86.chunk.js": "/rent-cars/static/js/697.575a2f86.chunk.js",
     "static/js/134.190f0cf7.chunk.js": "/rent-cars/static/js/134.190f0cf7.chunk.js",
-    "static/js/252.d8547ff5.chunk.js": "/rent-cars/static/js/252.d8547ff5.chunk.js",
+    "static/js/252.49154811.chunk.js": "/rent-cars/static/js/252.49154811.chunk.js",
     "static/media/Manrope-SemiBold.ttf": "/rent-cars/static/media/Manrope-SemiBold.310f108cc524df0e5ffc.ttf",
     "static/media/Manrope-Medium.ttf": "/rent-cars/static/media/Manrope-Medium.08894ccb04665d1a9d53.ttf",
     "static/media/Manrope-Regular.ttf": "/rent-cars/static/media/Manrope-Regular.a9b9e09fe6b69741f316.ttf",
@@ -14,15 +14,15 @@
     "static/media/sprite.svg": "/rent-cars/static/media/sprite.a34d32cb968205ee7a97f322edabbac4.svg",
     "index.html": "/rent-cars/index.html",
     "main.428091be.css.map": "/rent-cars/static/css/main.428091be.css.map",
-    "main.888da6bf.js.map": "/rent-cars/static/js/main.888da6bf.js.map",
+    "main.6a121064.js.map": "/rent-cars/static/js/main.6a121064.js.map",
     "863.1bc233d6.chunk.js.map": "/rent-cars/static/js/863.1bc233d6.chunk.js.map",
     "69.92c1caaa.chunk.js.map": "/rent-cars/static/js/69.92c1caaa.chunk.js.map",
     "697.575a2f86.chunk.js.map": "/rent-cars/static/js/697.575a2f86.chunk.js.map",
     "134.190f0cf7.chunk.js.map": "/rent-cars/static/js/134.190f0cf7.chunk.js.map",
-    "252.d8547ff5.chunk.js.map": "/rent-cars/static/js/252.d8547ff5.chunk.js.map"
+    "252.49154811.chunk.js.map": "/rent-cars/static/js/252.49154811.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.428091be.css",
-    "static/js/main.888da6bf.js"
+    "static/js/main.6a121064.js"
   ]
 }
